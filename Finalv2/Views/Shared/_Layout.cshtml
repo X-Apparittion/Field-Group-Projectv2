@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top mb-sm-auto">
+        <div class="container">
+            <div class="navbar-header">
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto ">
+
+                    <!--Dropdown for pages: Home, About and Contact-->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Home
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">@Html.ActionLink("Home", "Index", "Home")</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">@Html.ActionLink("About", "About", "Home")</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">@Html.ActionLink("Contact", "Contact", "Home")</a>
+                        </div>
+                    </li>
+
+                    <!--Dropdown for pages: Teachers and Course-->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Meet The Teachers!
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">@Html.ActionLink("Teachers", "Index", "Teachers")</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">@Html.ActionLink("Courses", "Index", "Course")</a>
+                            
+                        </div>
+                    </li>
+
+                    <!--Dropdown for pages: Guides and Forum-->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            We Can Lead You?
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item">@Html.ActionLink("Forum", "Index", "Forum")</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">@Html.ActionLink("Guides List", "Index", "Forum")</a>
+                           
+                        </div>
+                    </li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </nav>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
