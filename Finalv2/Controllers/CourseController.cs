@@ -11,6 +11,7 @@ using Finalv2.Models;
 
 namespace Finalv2.Controllers
 {
+    [Authorize]
     public class CourseController : Controller
     {
         private Final_DBEntities db = new Final_DBEntities();
