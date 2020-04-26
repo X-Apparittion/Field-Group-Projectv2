@@ -351,6 +351,9 @@
     <Content Include="Content\Images\About_images\About_2.jpg" />
     <Content Include="Content\Images\About_images\About_3.png" />
     <Content Include="Content\Images\About_images\About_4.jpg" />
+    <Content Include="Content\Images\Home Page\DE.png" />
+    <Content Include="Content\Images\Home Page\DQ.png" />
+    <Content Include="Content\Images\Home Page\DW.png" />
     <Content Include="Content\uikit.almost-flat.css" />
     <Content Include="Content\uikit.almost-flat.min.css" />
     <Content Include="Content\uikit.css" />
